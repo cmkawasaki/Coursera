@@ -26,13 +26,17 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+mu = mean(X);
+sigma = (1 ./ std(X));
+muarray = mu;
+sigmaarray = sigma;
 
+for iter = 2:size(X,1)
+muarray = [muarray; mu];
+sigmaarray = [sigmaarray; sigma];
+end
 
-
-
-
-
-
+X_norm = (X-muarray) .* sigmaarray;
 
 % ============================================================
 

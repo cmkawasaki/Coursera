@@ -106,6 +106,10 @@ fprintf('\n');
 % not need to be normalized.
 price = 0; % You should change this
 
+myhouse = ([1650, 3]-mu) .* sigma;
+myhouse = [1, myhouse];
+price = myhouse * theta;
+
 
 % ============================================================
 
@@ -151,6 +155,8 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 price = 0; % You should change this
 
+myhouse = [1, 1650, 3];
+price = myhouse * theta;
 
 % ============================================================
 
